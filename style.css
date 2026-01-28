@@ -1,39 +1,69 @@
+/* Import IBM Plex Sans from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    line-height: 1.6; /* เพิ่มระยะห่างบรรทัดให้อ่านง่ายขึ้น */
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
+    background-color: #fff; /* เปลี่ยน Header เป็นสีขาว */
+    color: #333; /* เปลี่ยนสีตัวอักษรเป็นสีเข้ม */
+    padding: 2rem 0;
+    display: flex; /* จัด Layout ให้ Logo กับ Menu อยู่บรรทัดเดียวกัน */
+    justify-content: space-between; /* ให้ Logo ชิดซ้าย Menu ชิดขวา */
+    align-items: center; /* จัดให้ตรงกลางตามแนวตั้ง */
+    padding: 1rem 5rem; /* เพิ่ม Padding ด้านข้าง */
 }
 
 header .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+header nav {
+    display: flex; /* จัด Menu ให้อยู่ในบรรทัดเดียวกัน */
 }
 
 header nav a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease; /* เพิ่ม Animation ตอน Hover */
+}
+
+header nav a:hover {
+    background-color: #eee; /* เปลี่ยนสีพื้นหลังตอน Hover */
 }
 
 .content-section {
-    padding: 2rem;
-    margin: 1rem;
+    padding: 3rem 5rem;
+    margin: 0;
     background-color: #fff;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: none; /* เอาเงาออก เพื่อให้ดู Minimal */
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center; /* จัดหัวข้อให้อยู่ตรงกลาง */
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    color: #666;
 }
 
 footer {
     text-align: center;
-    padding: 1rem 0;
-    background-color: #333;
-    color: #fff;
+    padding: 2rem 0;
+    background-color: #f4f4f4;
+    color: #666; /* เปลี่ยนสีตัวอักษรเป็นสีเทา */
+    border-top: 1px solid #ddd; /* เพิ่มเส้นขอบด้านบน */
 }
